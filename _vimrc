@@ -1,67 +1,68 @@
-set nocompatible
-source $VIMRUNTIME/vimrc_example.vim
-"source $VIMRUNTIME/mswin.vim
-"behave mswin
+  set nocompatible
+  source $VIMRUNTIME/vimrc_example.vim
+  "source $VIMRUNTIME/mswin.vim
+  "behave mswin
 
-set diffexpr=MyDiff()
-function MyDiff()
-  let opt = '-a --binary '
-  if &diffopt =~ 'icase' | let opt = opt . '-i ' | endif
-  if &diffopt =~ 'iwhite' | let opt = opt . '-b ' | endif
-  let arg1 = v:fname_in
-  if arg1 =~ ' ' | let arg1 = '"' . arg1 . '"' | endif
-  let arg2 = v:fname_new
-  if arg2 =~ ' ' | let arg2 = '"' . arg2 . '"' | endif
-  let arg3 = v:fname_out
-  if arg3 =~ ' ' | let arg3 = '"' . arg3 . '"' | endif
-  let eq = ''
-  if $VIMRUNTIME =~ ' '
-    if &sh =~ '\<cmd'
-      let cmd = '""' . $VIMRUNTIME . '\diff"'
-      let eq = '"'
+  set diffexpr=MyDiff()
+  function MyDiff()
+    let opt = '-a --binary '
+    if &diffopt =~ 'icase' | let opt = opt . '-i ' | endif
+    if &diffopt =~ 'iwhite' | let opt = opt . '-b ' | endif
+    let arg1 = v:fname_in
+    if arg1 =~ ' ' | let arg1 = '"' . arg1 . '"' | endif
+    let arg2 = v:fname_new
+    if arg2 =~ ' ' | let arg2 = '"' . arg2 . '"' | endif
+    let arg3 = v:fname_out
+    if arg3 =~ ' ' | let arg3 = '"' . arg3 . '"' | endif
+    let eq = ''
+    if $VIMRUNTIME =~ ' '
+      if &sh =~ '\<cmd'
+        let cmd = '""' . $VIMRUNTIME . '\diff"'
+        let eq = '"'
+      else
+        let cmd = substitute($VIMRUNTIME, ' ', '" ', '') . '\diff"'
+      endif
     else
-      let cmd = substitute($VIMRUNTIME, ' ', '" ', '') . '\diff"'
+      let cmd = $VIMRUNTIME . '\diff'
     endif
-  else
-    let cmd = $VIMRUNTIME . '\diff'
-  endif
-  silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
-endfunction
+    silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
+  endfunction
 
 
-"--------------------------
-"General Stuff
-"-------------------------
+  "--------------------------
+  "General Stuff
+  "-------------------------
 
-"autoread when file is changed
-set autoread
+  "autoread when file is changed
+  set autoread
 
-"filetype plugin
-filetype plugin on
-filetype indent on
+  "filetype plugin
+  filetype plugin on
+  filetype indent on
 
-set hidden
+  set hidden
 
-set nocompatible
+  set nocompatible
 
-"map fullscreen
-map <F11> <Esc>:call libcallnr("gvimfullscreen.dll", "ToggleFullScreen", 0)<CR> 
+  "map fullscreen
+  map <F11> <Esc>:call libcallnr("gvimfullscreen.dll", "ToggleFullScreen", 0)<CR> 
 
-"Get rid of the menus
-set guioptions-=m  "remove menu bar
-set guioptions-=T  "remove toolbar
-set guioptions-=r  "remove right-hand scroll bar
-set guioptions-=l
+  "Get rid of the menus
+  set guioptions-=m  "remove menu bar
+  set guioptions-=T  "remove toolbar
+  set guioptions-=r  "remove right-hand scroll bar
+  set guioptions-=l
 
-"Make it so it doesn't close the window when I type :q because I'm used to
-"linux dammit!
-cnoreabbrev wq w<bar>bd
-cnoreabbrev q bd
+  "Make it so it doesn't close the window when I type :q because I'm used to
+  "linux dammit!
+  cnoreabbrev wq w<bar>bd
+  cnoreabbrev q bd
 
-"Stop vim from leaving temp files everywhere
-set backupdir=~/tmp
-set directory=~/tmp
-set undofile
+  "Stop vim from leaving temp files everywhere
+  set backupdir=~/vimtmp
+  set directory=~/vimtmp
+  set undofile
+  set undodir=~/vimtmp
 
 "------------
 "UI
