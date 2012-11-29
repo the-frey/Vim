@@ -94,6 +94,13 @@ set relativenumber
 "Highlight the cursor line
 set cursorline
 
+"--------------
+"Plugin config
+"--------------
+
+"Bind sparkup to F8
+let g:sparkupExecuteMapping='<c-x>'
+
 "Bind NERDTree file explorer to q
 nnoremap q :NERDTree<CR>
 
@@ -135,7 +142,8 @@ set encoding=utf8
 
 set t_Co=256
 let g:zenburn_high_Contrast=1
-colors zenburn
+"colors zenburn
+colors molokai
 
 "--------------------
 "Tabs and shiz
@@ -155,5 +163,3 @@ nnoremap tc :tabclose<CR>
 set autoindent "Auto indent
 set smartindent "Smart indet
 "set wrap "Wrap line
-
-
