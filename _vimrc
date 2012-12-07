@@ -158,8 +158,10 @@ set smarttab
 nnoremap <C-t>  :tabnew<CR>
 inoremap <C-t> <Esc>:tabnew<CR>i
 nnoremap <Tab> :tabnext<CR>
+nnoremap <C-Tab> :tabprev<CR>
 nnoremap tc :tabclose<CR>
 
 set autoindent "Auto indent
 set smartindent "Smart indet
 "set wrap "Wrap line
+set nowrap
