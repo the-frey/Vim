@@ -1,4 +1,3 @@
-  set nocompatible
   source $VIMRUNTIME/vimrc_example.vim
   "source $VIMRUNTIME/mswin.vim
   "behave mswin
@@ -80,6 +79,16 @@ set smartcase
 
 "map highlight clear to double-Esc
 map <Esc><Esc> :nohl<CR>
+
+map <c-l> <c-w>l<c-w>_
+map <c-h> <c-w>h<c-w>_
+map <c-j> <c-w>j<c-w>_
+map <c-k> <c-w>k<c-w>_
+map - <C-W><
+map + <C-W>>
+
+
+
 
 "regex
 set magic
