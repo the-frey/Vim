@@ -42,6 +42,14 @@ set smartcase
 "map highlight clear to double-Esc
 map <Esc><Esc> :nohl<CR>
 
+"Easy window movement
+map <c-l> <c-w>l<c-w>_
+map <c-h> <c-w>h<c-w>_
+map <c-j> <c-w>j<c-w>_
+map <c-k> <c-w>k<c-w>_
+map - <C-W><
+map + <C-W>>
+
 "regex
 set magic
 
@@ -96,9 +104,9 @@ au BufNewFile,BufRead *.asp set filetype=aspvbs.html
 set encoding=utf8
 
 set t_Co=256
-"let g:zenburn_high_Contrast=1
-"colors zenburn
-colors molokai
+let g:zenburn_high_Contrast=1
+colors zenburn
+"colors molokai
 
 "--------------------
 "Tabs and shiz
@@ -118,3 +126,4 @@ nnoremap tc :tabclose<CR>
 set autoindent "Auto indent
 set smartindent "Smart indet
 "set wrap "Wrap line
+set nowrap
