@@ -80,6 +80,7 @@ set smartcase
 "map highlight clear to double-Esc
 map <Esc><Esc> :nohl<CR>
 
+"Easy window moving and resizing
 map <c-l> <c-w>l<c-w>_
 map <c-h> <c-w>h<c-w>_
 map <c-j> <c-w>j<c-w>_
@@ -87,6 +88,8 @@ map <c-k> <c-w>k<c-w>_
 map - <C-W><
 map + <C-W>>
 
+"Map recording to z instead of q
+nnoremap z q
 
 
 
@@ -116,12 +119,17 @@ nnoremap q :NERDTree<CR>
 "------------------------
 "Folding
 "------------------------
+"Set maximum numner of nested folds to 5
+set foldnestmax=5
+"Minimum number of lines folded
+set foldminlines=4
 
 "folding method to indent then manual
 augroup vimrc
   au BufReadPre * setlocal foldmethod=syntax
-  au BufWinEnter * if &fdm == 'indent' | setlocal foldmethod=manual | endif
+  au BufWinEnter * if &fdm == 'syntax' | setlocal foldmethod=manual | endif
 augroup END
+
 "Set opening and closing folds to F9
 inoremap <F9> <C-O>za
 nnoremap <F9> za

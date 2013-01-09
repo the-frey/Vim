@@ -116,6 +116,20 @@ snippet head
 	</head>
 snippet title
 	<title>${1:`substitute(Filename('', 'Page Title'), '^.', '\u&', '')`}</title>${2}
+#Quick start layout
+snippet start
+	<!DOCTYPE HTML>
+	<html>
+		<head>
+			<meta http-equiv="content-type" content="text/html; charset=utf-8"`Close()`>
+
+			<title>${1:`substitute(Filename('', 'Page Title'), '^.', '\u&', '')`}</title>
+			${2}
+		</head>
+		<body>
+			${3}
+		</body>
+	</html>
 snippet script
 	<script type="text/javascript" charset="utf-8">
 		${1}
