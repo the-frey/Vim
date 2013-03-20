@@ -173,7 +173,7 @@ snippet a.
 snippet a#
 	<a href="${1}" id="${2:identify}">${3}</a>
 snippet img
-	<img src="${1}" width="${2}px" height="${3}px" alt="${4:This is the alt-text}" />
+	<img src="${1}" width="${2}" height="${3}" alt="${4:This is the alt-text}" />
 # Embed QT Movie
 snippet movie
 	<object width="$2" height="$3" classid="clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B"
@@ -232,5 +232,11 @@ snippet table
 		<tr><th>${2:Header}</th></tr>
 		<tr><th>${3:Data}</th></tr>
 	</table>${4}
+snippet tr
+	<tr>
+		<td>${1}</td>
+	</tr>
+snippet td
+	<td>${1}</td>
 snippet textarea
 	<textarea name="${1:Name}" rows="${2:8}" cols="${3:40}">${4}</textarea>${5}
