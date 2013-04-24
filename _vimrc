@@ -1,6 +1,8 @@
+" set home dir to C:\Users\jwilkinson
+let $HOME = 'C:\Users\jwilkinson'
+
+
   source $VIMRUNTIME/vimrc_example.vim
-  "source $VIMRUNTIME/mswin.vim
-  "behave mswin
 
   set diffexpr=MyDiff()
   function MyDiff()
