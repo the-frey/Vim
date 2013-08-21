@@ -40,6 +40,8 @@ let $HOME = 'C:\Users\jwilkinson'
   "filetype plugin
   filetype plugin on
   filetype indent on
+  "omnicomplete
+  set ofu=syntaxcomplete#Complete
 
   set hidden
 
