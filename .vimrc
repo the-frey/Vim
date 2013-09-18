@@ -50,6 +50,9 @@ map <c-k> <c-w>k<c-w>_
 map - <C-W><
 map + <C-W>>
 
+"Map recording to z instead of q
+nnoremap z q
+
 "regex
 set magic
 
@@ -76,12 +79,17 @@ nnoremap q :NERDTree<CR>
 "------------------------
 "Folding
 "------------------------
+"Set maximum numner of nested folds to 5
+set foldnestmax=5
+"Minimum number of lines folded
+set foldminlines=4
 
 "folding method to indent then manual
 augroup vimrc
   au BufReadPre * setlocal foldmethod=syntax
-  au BufWinEnter * if &fdm == 'indent' | setlocal foldmethod=manual | endif
+  au BufWinEnter * if &fdm == 'syntax' | setlocal foldmethod=manual | endif
 augroup END
+
 "Set opening and closing folds to F9
 inoremap <F9> <C-O>za
 nnoremap <F9> za
@@ -100,6 +108,9 @@ au BufNewFile,BufRead *.less set filetype=less
 
 "Enable html snippets in asp
 au BufNewFile,BufRead *.asp set filetype=aspvbs.html
+"Enable html snippets in python
+autocmd FileType html set ft=htmldjango.html " For SnipMate
+
 
 set encoding=utf8
 
@@ -124,6 +135,5 @@ nnoremap <Tab> :tabnext<CR>
 nnoremap tc :tabclose<CR>
 
 set autoindent "Auto indent
-set smartindent "Smart indet
 "set wrap "Wrap line
 set nowrap
