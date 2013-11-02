@@ -164,4 +164,10 @@ Bundle 'scrooloose/nerdtree'
 "Sumblime style multiple-cursors
 Bundle 'terryma/vim-multiple-cursors'
 
+"Supertab
+Bundle 'ervandew/supertab'
+
+"CoffeeScript
+Bundle 'kchmck/vim-coffee-script'
+
 filetype on
