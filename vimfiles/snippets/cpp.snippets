@@ -19,6 +19,11 @@ snippet ns
 	namespace ${1:`Filename('', 'my')`} {
 		${2}
 	} /* $1 */
+#c++11 ranged for
+snippet fore
+	for(${1:auto} ${2:element} : ${3:range}){
+		${4}
+	}
 # Class
 snippet class
 	class ${1:`Filename('$1_t', 'name')`} {
