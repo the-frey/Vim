@@ -1,4 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
-let g:netrw_dirhist_1='/home/jonny/webdev/nodejs/node_modules/irc/test'
-let g:netrw_dirhist_2='/home/jonny/webdev/django/pro_sched/planner/templates'
