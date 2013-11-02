@@ -153,6 +153,13 @@ Bundle 'gmarik/vundle'
 
 "My Bundles:
 
+"Snipmate
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle "garbas/vim-snipmate"
+
+
+"Sumblime style multiple-cursors
 Bundle 'terryma/vim-multiple-cursors'
 
 filetype on
