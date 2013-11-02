@@ -186,3 +186,21 @@ set autoindent "Auto indent
 set smartindent "Smart indet
 "set wrap "Wrap line
 set nowrap
+
+"--------------------
+"VUNDLE
+"--------------------
+
+filetype off
+
+set rtp+=C:/Program\ Files\ (x86)/Vim/vimfiles/bundle/vundle/
+call vundle#rc()
+
+"let Vundle manage Vundle
+Bundle 'gmarik/vundle'
+
+"My Bundles:
+
+Bundle 'terryma/vim-multiple-cursors'
+
+filetype on

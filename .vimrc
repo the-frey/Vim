@@ -137,3 +137,22 @@ nnoremap tc :tabclose<CR>
 set autoindent "Auto indent
 "set wrap "Wrap line
 set nowrap
+
+
+"--------------------
+"VUNDLE
+"--------------------
+
+filetype off
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+"let Vundle manage Vundle
+Bundle 'gmarik/vundle'
+
+"My Bundles:
+
+Bundle 'terryma/vim-multiple-cursors'
+
+filetype on
