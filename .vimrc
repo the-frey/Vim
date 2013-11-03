@@ -12,6 +12,7 @@
   set omnifunc=syntaxcomplete#Complete
   let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
   let g:superTabDefaultCompletionType = "context"
+  set pumheight=15
 
   set hidden
 
