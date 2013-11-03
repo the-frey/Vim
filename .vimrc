@@ -10,8 +10,8 @@
   filetype indent on
   "omnicomplete
   set omnifunc=syntaxcomplete#Complete
-  let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
-  let g:superTabDefaultCompletionType = "context"
+  let g:superTabDefaultCompletionType = "<c-n>"
+  "Make the pop up menu a resasonble height
   set pumheight=15
 
   set hidden
@@ -176,6 +176,14 @@ Bundle 'ervandew/supertab'
 "OmniCppComplete
 Bundle 'vim-scripts/OmniCppComplete'
 
+"EasyTags
+"Bundle 'xolox/vim-misc'
+"Bundle 'xolox/vim-easytags'
+
+"Syntastic Syntax checking
+Bundle 'scrooloose/syntastic'
+
+
 "CoffeeScript
 Bundle 'kchmck/vim-coffee-script'
 
@@ -191,7 +199,9 @@ filetype on
 set tags+=~/.vim/tags/cpp
 set tags+=~/.vim/tags/qt4
 " build tags of your own project with Ctrl-F12
-map <C-F12> :!ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+Q .<CR>
+map <C-F12> :!ctags -R --exclude=*/venv/* --sort=yes --c++-kinds=+p --python-kinds=-i --fields=+iaS --extra=+q .<CR>
+"Find tags
+map <F12> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 
 " OmniCppComplete
 let OmniCpp_NamespaceSearch = 1
