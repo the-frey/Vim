@@ -119,9 +119,10 @@ autocmd FileType html set ft=htmldjango.html " For SnipMate
 set encoding=utf8
 
 set t_Co=256
-let g:zenburn_high_Contrast=1
-colors zenburn
+"let g:zenburn_high_Contrast=1
+"colors zenburn
 "colors molokai
+colors darkai
 
 "--------------------
 "Tabs and shiz
