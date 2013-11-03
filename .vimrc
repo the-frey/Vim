@@ -75,9 +75,6 @@ set cursorline
 "Plugin config
 "--------------
 
-"Bind sparkup to F8
-let g:sparkupExecuteMapping='<c-x>'
-
 "Bind NERDTree file explorer to q
 nnoremap q :NERDTree<CR>
 
