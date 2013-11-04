@@ -1,34 +1,34 @@
-  "--------------------------
-  "General Stuff
-  "-------------------------
+"--------------------------
+"General Stuff
+"-------------------------
 
-  "autoread when file is changed
-  set autoread
+"autoread when file is changed
+set autoread
 
-  "filetype plugin
-  filetype plugin on
-  filetype indent on
-  "omnicomplete
-  set omnifunc=syntaxcomplete#Complete
-  let g:superTabDefaultCompletionType = "<c-n>"
-  "Make the pop up menu a resasonble height
-  set pumheight=15
+"filetype plugin
+filetype plugin on
+filetype indent on
+"omnicomplete
+set omnifunc=syntaxcomplete#Complete
+let g:superTabDefaultCompletionType = "<c-n>"
+"Make the pop up menu a resasonble height
+set pumheight=15
 
-  set hidden
+set hidden
 
-  set nocompatible
+set nocompatible
 
-  "Get rid of the menus
-  set guioptions-=m  "remove menu bar
-  set guioptions-=T  "remove toolbar
-  set guioptions-=r  "remove right-hand scroll bar
-  set guioptions-=l
+"Get rid of the menus
+set guioptions-=m  "remove menu bar
+set guioptions-=T  "remove toolbar
+set guioptions-=r  "remove right-hand scroll bar
+set guioptions-=l
 
-  "Stop vim from leaving temp files everywhere
-  set backupdir=~/.vimtmp
-  set directory=~/.vimtmp
-  set undofile
-  set undodir=~/.vimtmp
+"Stop vim from leaving temp files everywhere
+set backupdir=~/.vimtmp
+set directory=~/.vimtmp
+set undofile
+set undodir=~/.vimtmp
 
 "------------
 "UI
@@ -127,8 +127,8 @@ colors darkai
 "--------------------
 
 set expandtab
-set shiftwidth=2
-set tabstop=2
+set shiftwidth=4
+set tabstop=4
 set smarttab
 
 " And the other kind of tabs
