@@ -55,8 +55,6 @@ map <c-k> <c-w>k<c-w>_
 map - <C-W><
 map + <C-W>>
 
-"Map recording to z instead of q
-nnoremap z q
 
 "regex
 set magic
@@ -80,6 +78,7 @@ nnoremap q :NERDTree<CR>
 
 "C++11 is cool yo
 let g:syntastic_cpp_compiler_options = ' -std=c++11'
+let g:syntastic_cpp_config = 'syntastic_conf'
 let c_no_curly_error=1
 
 "------------------------
@@ -101,7 +100,11 @@ inoremap <F9> <C-O>za
 nnoremap <F9> za
 onoremap <F9> <C-C>za
 vnoremap <F9> zf
+nnoremap <C-F9> zR
+nnoremap <M-F9> zM
 
+"Map recording to z instead of q
+nnoremap z q
 
 "---------------------
 "Colours and fonts
@@ -210,9 +213,11 @@ filetype on
 set tags+=~/.vim/tags/cpp
 set tags+=~/.vim/tags/qt4
 " build tags of your own project with Ctrl-F12
-map <C-F12> :!ctags -R --exclude=*/venv/* --sort=yes --c++-kinds=+p --python-kinds=-i --fields=+iaS --extra=+q .<CR>
+map <C-F12> :!ctags -R --exclude=*/venv/* --sort=yes --c++-kinds=+p --python-kinds=-i --fields=+iaS --extra=+q .<CR> 
 "Find tags
 map <F12> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+
+map<C-F11> :! find "$PWD" -type d <bar> awk '{print "-I" $0}' > syntastic_conf<CR> :let g:syntastic_cpp_config_file = 'syntastic_conf'<CR>
 
 " OmniCppComplete
 let OmniCpp_NamespaceSearch = 1
