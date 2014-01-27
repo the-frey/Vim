@@ -187,6 +187,9 @@ Bundle 'ervandew/supertab'
 "OmniCppComplete
 Bundle 'vim-scripts/OmniCppComplete'
 
+"a.vim Alternate Files quickly
+Bundle 'vim-scripts/a.vim'
+
 "EasyTags
 "Bundle 'xolox/vim-misc'
 "Bundle 'xolox/vim-easytags'
