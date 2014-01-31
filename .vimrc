@@ -193,6 +193,9 @@ Bundle 'vim-scripts/OmniCppComplete'
 "a.vim Alternate Files quickly
 Bundle 'vim-scripts/a.vim'
 
+"Ctrl-P fuzzy finding
+Bundle 'kien/ctrlp.vim'
+
 "EasyTags
 "Bundle 'xolox/vim-misc'
 "Bundle 'xolox/vim-easytags'
