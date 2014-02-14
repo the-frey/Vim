@@ -218,6 +218,7 @@ filetype on
 " configure tags - add additional tags here or comment out not-used ones
 set tags+=~/.vim/tags/cpp
 set tags+=~/.vim/tags/qt4
+set tags+=~/.vim/tags/python
 " build tags of your own project with Ctrl-F12
 map <C-F12> :!ctags -R --exclude=*/venv/* --sort=yes --c++-kinds=+p --python-kinds=-i --fields=+iaS --extra=+q .<CR> 
 "Find tags
