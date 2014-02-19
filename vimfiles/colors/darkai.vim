@@ -1,10 +1,9 @@
 " Vim color file
 "
-" Author: Tomas Restrepo <tomas@winterdom.com>
+" Author: Jonathan Dark <jonny@jonnydark.com>
 "
-" Note: Based on the monokai theme for textmate
-" by Wimer Hazenberg and its darker variant 
-" by Hamish Stuart Macpherson
+" Note: Based on the molokai theme by Tomas Restrepo
+" And the Flatland Dark theme for Sublime Text 2 by Joel Fillmore
 "
 
 hi clear
