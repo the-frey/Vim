@@ -78,7 +78,7 @@ nnoremap q :NERDTree<CR>
 
 "C++11 is cool yo
 let g:syntastic_cpp_compiler_options = ' -std=c++11'
-let g:syntastic_cpp_config = 'syntastic_conf'
+let g:syntastic_cpp_config_file = 'syntastic_conf'
 let c_no_curly_error=1
 
 "------------------------
