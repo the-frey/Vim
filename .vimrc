@@ -149,6 +149,25 @@ set autoindent "Auto indent
 "set wrap "Wrap line
 set nowrap
 
+"--------------------
+" Misc mapping
+"--------------------
+command W w
+
+nnoremap <silent><F8> :call QuickFixToggle()<CR>
+
+let g:quickfix_is_open = 0
+function! QuickFixToggle()
+    if g:quickfix_is_open
+        cclose
+        let g:quickfix_is_open = 0
+    else
+        copen
+        let g:quickfix_is_open = 1
+    endif
+endfunction
+
+map <C-F5> :tab split<CR>:exec("make")<Bar> cw<CR>
 
 "--------------------
 "VUNDLE
@@ -203,6 +222,12 @@ Bundle 'kien/ctrlp.vim'
 "Syntastic Syntax checking
 Bundle 'scrooloose/syntastic'
 
+"MakeShift auto build detection
+Bundle 'johnsyweb/vim-makeshift'
+
+"Hex highlighing
+Bundle 'skammer/vim-css-color'
+
 
 "CoffeeScript
 Bundle 'kchmck/vim-coffee-script'
@@ -222,8 +247,11 @@ set tags+=~/.vim/tags/qt4
 map <C-F12> :!ctags -R --exclude=*/venv/* --sort=yes --c++-kinds=+p --python-kinds=-i --fields=+iaS --extra=+q .<CR> 
 "Find tags
 map <F12> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+map <S-F12> :tab split<CR>:exec("grep -R \'\\b".expand("<cword>")."\\b\' ./ --include=\*.{cpp,h,c,hpp}")<Bar> cw<CR>
 
+" Load syntastic conf
 map<C-F11> :! find "$PWD" -type d <bar> awk '{print "-I" $0}' > syntastic_conf<CR> :let g:syntastic_cpp_config_file = 'syntastic_conf'<CR>
+
 
 " OmniCppComplete
 let OmniCpp_NamespaceSearch = 1
