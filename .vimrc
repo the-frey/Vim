@@ -200,6 +200,9 @@ Bundle "garbas/vim-snipmate"
 "NERD Tree
 Bundle 'scrooloose/nerdtree'
 
+"The Silver Searcher
+Bundle 'rking/ag.vim'
+
 "Sumblime style multiple-cursors
 Bundle 'terryma/vim-multiple-cursors'
 
@@ -226,11 +229,11 @@ Bundle 'scrooloose/syntastic'
 Bundle 'johnsyweb/vim-makeshift'
 
 "Hex highlighing
-Bundle 'skammer/vim-css-color'
+"Bundle 'skammer/vim-css-color'
 
 
 "CoffeeScript
-Bundle 'kchmck/vim-coffee-script'
+"Bundle 'kchmck/vim-coffee-script'
 
 filetype on
 
