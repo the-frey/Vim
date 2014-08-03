@@ -228,6 +228,9 @@ Bundle 'scrooloose/syntastic'
 "MakeShift auto build detection
 Bundle 'johnsyweb/vim-makeshift'
 
+"Tabulation
+Bundle 'godlygeek/tabular'
+
 "Hex highlighing
 "Bundle 'skammer/vim-css-color'
 
