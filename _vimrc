@@ -1,5 +1,5 @@
-" set home dir to C:\Users\jwilkinson
-let $HOME = 'C:\Users\jwilkinson'
+" set home dir to current server user
+let $HOME = '~/'
 
 
   source $VIMRUNTIME/vimrc_example.vim
@@ -58,8 +58,8 @@ let $HOME = 'C:\Users\jwilkinson'
 
   "Make it so it doesn't close the window when I type :q because I'm used to
   "linux dammit!
-  cnoreabbrev wq w<bar>bd
-  cnoreabbrev q bd
+  " cnoreabbrev wq w<bar>bd
+  " cnoreabbrev q bd
 
   "Stop vim from leaving temp files everywhere
   set backupdir=~/vimtmp
