@@ -203,6 +203,8 @@ Bundle 'kien/ctrlp.vim'
 "Syntastic Syntax checking
 Bundle 'scrooloose/syntastic'
 
+" GitGutter
+Plugin 'airblade/vim-gitgutter'
 
 "CoffeeScript
 Bundle 'kchmck/vim-coffee-script'
