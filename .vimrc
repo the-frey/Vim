@@ -111,7 +111,11 @@ nnoremap z q
 "---------------------
 "
 "Enable syntax highlighting
-syntax on
+syntax enable
+
+set background=dark
+"colorscheme solarized
+
 " For .less files
 au BufNewFile,BufRead *.less set filetype=less
 
@@ -128,6 +132,7 @@ set t_Co=256
 "colors zenburn
 "colors molokai
 colors darkai
+"colors solarized
 
 "--------------------
 "Tabs and shiz
