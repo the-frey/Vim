@@ -113,7 +113,7 @@ nnoremap z q
 "Enable syntax highlighting
 syntax enable
 
-set background=dark
+"set background=dark
 "colorscheme solarized
 
 " For .less files
@@ -124,22 +124,22 @@ au BufNewFile,BufRead *.asp set filetype=aspvbs.html
 "Enable html snippets in python
 autocmd FileType html set ft=htmldjango.html " For SnipMate
 
-
 set encoding=utf8
 
 set t_Co=256
 "let g:zenburn_high_Contrast=1
 "colors zenburn
 "colors molokai
-colors darkai
+"colors darkai
 "colors solarized
+colors flatland
 
 "--------------------
 "Tabs and shiz
 "--------------------
 
 set expandtab
-set shiftwidth=4
+set shiftwidth=2
 set tabstop=4
 set smarttab
 
