@@ -8,10 +8,12 @@ if exists("syntax_on")
   syntax reset
 endif
 
-let g:colors_name = "PlasticCodeWrap"
+let g:colors_name = "flatland"
+
+let g:airline_theme = "jellybeans"
 
 hi Cursor ctermfg=16 ctermbg=59 cterm=NONE guifg=#26292c guibg=#646769 gui=NONE
-hi Visual ctermfg=NONE ctermbg=59 cterm=NONE guifg=NONE guibg=#3c3f42 gui=NONE
+hi Visual ctermfg=NONE ctermbg=59 cterm=NONE guifg=NONE guibg=#515559 gui=NONE
 hi CursorLine ctermfg=NONE ctermbg=59 cterm=NONE guifg=NONE guibg=#3b3e40 gui=NONE
 hi CursorColumn ctermfg=NONE ctermbg=59 cterm=NONE guifg=NONE guibg=#3b3e40 gui=NONE
 hi ColorColumn ctermfg=NONE ctermbg=59 cterm=NONE guifg=NONE guibg=#3b3e40 gui=NONE
@@ -105,3 +107,11 @@ hi cssClassName ctermfg=74 ctermbg=NONE cterm=NONE guifg=#72aaca guibg=NONE gui=
 hi cssValueLength ctermfg=150 ctermbg=NONE cterm=NONE guifg=#b8d977 guibg=NONE gui=NONE
 hi cssCommonAttr ctermfg=150 ctermbg=NONE cterm=NONE guifg=#b7d877 guibg=NONE gui=NONE
 hi cssBraces ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
+
+hi! link cFormat Identifier
+hi! link cOperator Constant
+hi! link cString Constant
+hi! link cppRawString Constant
+hi! link cSpecial Constant
+hi! link cLabel cStatement
+hi! link cppAccess cppStructure

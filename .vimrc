@@ -44,6 +44,15 @@ set ruler
 set ignorecase
 set smartcase
 
+"airline
+set laststatus=2
+set ttimeoutlen=50
+
+set statusline=%{fugitive#statusline()}
+
+let g:airline_powerline_fonts = 1
+"let g:airline_theme='solarized'
+
 "map highlight clear to double-Esc
 map <Esc><Esc> :nohl<CR>
 
@@ -110,19 +119,15 @@ nnoremap z q
 "Colours and fonts
 "---------------------
 "
+
+"set term colours
+set term=xterm-256color
+
 "Enable syntax highlighting
 syntax enable
 
-"set background=dark
+set background=dark
 "colorscheme solarized
-
-" For .less files
-au BufNewFile,BufRead *.less set filetype=less
-
-"Enable html snippets in asp
-au BufNewFile,BufRead *.asp set filetype=aspvbs.html
-"Enable html snippets in python
-autocmd FileType html set ft=htmldjango.html " For SnipMate
 
 set encoding=utf8
 
@@ -191,6 +196,15 @@ Bundle 'terryma/vim-multiple-cursors'
 
 "Supertab
 Bundle 'ervandew/supertab'
+
+"Airline
+Plugin 'bling/vim-airline'
+
+"Solarized
+Plugin 'altercation/vim-colors-solarized'
+
+"Fugitive
+Plugin 'tpope/vim-fugitive'
 
 "OmniCppComplete
 Bundle 'vim-scripts/OmniCppComplete'

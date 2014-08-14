@@ -161,10 +161,10 @@ au BufNewFile,BufRead *.asp set filetype=aspvbs.html
 
 set encoding=utf8
 
-set t_Co=256
-let g:zenburn_high_Contrast=1
+"set t_Co=256
+"let g:zenburn_high_Contrast=1
 "colors zenburn
-colors molokai
+"colors molokai
 
 "--------------------
 "Tabs and shiz
