@@ -50,9 +50,6 @@ set ttimeoutlen=50
 
 set statusline=%{fugitive#statusline()}
 
-let g:airline_powerline_fonts = 1
-"let g:airline_theme='solarized'
-
 "map highlight clear to double-Esc
 map <Esc><Esc> :nohl<CR>
 
@@ -126,18 +123,29 @@ set term=xterm-256color
 "Enable syntax highlighting
 syntax enable
 
-set background=dark
+"let g:solarized_termcolors=16
+let g:solarized_termcolors=256
+
+"set background=light
 "colorscheme solarized
+"let g:solarized_termtrans = 1
 
 set encoding=utf8
 
 set t_Co=256
+
+"set background=dark
+
 "let g:zenburn_high_Contrast=1
 "colors zenburn
 "colors molokai
 "colors darkai
 "colors solarized
-colors flatland
+"colors flatland
+colors solarized
+
+let g:airline_powerline_fonts = 1
+let g:airline_theme='bubblegum'
 
 "--------------------
 "Tabs and shiz
