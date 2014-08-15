@@ -123,16 +123,16 @@ set term=xterm-256color
 "Enable syntax highlighting
 syntax enable
 
-"let g:solarized_termcolors=16
-let g:solarized_termcolors=256
+let g:solarized_termcolors=16
+"let g:solarized_termcolors=256
 
-"set background=light
+set background=dark
 "colorscheme solarized
 "let g:solarized_termtrans = 1
 
 set encoding=utf8
 
-set t_Co=256
+"set t_Co=256
 
 "set background=dark
 
@@ -145,7 +145,7 @@ set t_Co=256
 colors solarized
 
 let g:airline_powerline_fonts = 1
-let g:airline_theme='bubblegum'
+let g:airline_theme='solarized'
 
 "--------------------
 "Tabs and shiz
