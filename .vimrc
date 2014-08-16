@@ -80,7 +80,8 @@ set cursorline
 "--------------
 
 "Bind NERDTree file explorer to q
-nnoremap q :NERDTree<CR>
+"nnoremap q :NERDTree<CR>
+nnoremap q :NERDTreeTabsToggle<CR>
 
 "C++11 is cool yo
 let g:syntastic_cpp_compiler_options = ' -std=c++11'
@@ -178,6 +179,8 @@ set autoindent "Auto indent
 "set wrap "Wrap line
 set nowrap
 
+let g:gitgutter_realtime = 1
+let g:gitgutter_eager = 1
 
 "--------------------
 "VUNDLE
@@ -207,8 +210,15 @@ Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 Bundle "garbas/vim-snipmate"
 
-"NERD Tree
+"NERD Tree and tabs
 Bundle 'scrooloose/nerdtree'
+Bundle 'jistr/vim-nerdtree-tabs'
+
+"The Silver Searcher
+Bundle 'rking/ag.vim'
+
+"Hex highlighing
+Bundle 'skammer/vim-css-color'
 
 "Sumblime style multiple-cursors
 Bundle 'terryma/vim-multiple-cursors'
