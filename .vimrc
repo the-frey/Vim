@@ -1,6 +1,6 @@
 "--------------------------
 "General Stuff
-"-------------------------
+"------------------------- 
 
 "autoread when file is changed
 set autoread
@@ -160,7 +160,7 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme='solarized'
 
 "--------------------
-"Tabs and shiz
+"Tabs and such
 "--------------------
 
 set expandtab
@@ -181,6 +181,7 @@ set nowrap
 
 let g:gitgutter_realtime = 1
 let g:gitgutter_eager = 1
+highlight clear SignColumn
 
 "--------------------
 "VUNDLE
