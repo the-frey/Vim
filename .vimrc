@@ -157,7 +157,7 @@ set encoding=utf8
 colors solarized
 
 let g:airline_powerline_fonts = 1
-let g:airline_theme='solarized'
+let g:airline_theme='bubblegum'
 
 "--------------------
 "Tabs and such
@@ -217,7 +217,7 @@ Bundle 'jistr/vim-nerdtree-tabs'
 
 "The Silver Searcher
 Bundle 'rking/ag.vim'
-
+  
 "Hex highlighing
 Bundle 'skammer/vim-css-color'
 
@@ -252,8 +252,11 @@ Bundle 'kien/ctrlp.vim'
 "Syntastic Syntax checking
 Bundle 'scrooloose/syntastic'
 
-" GitGutter
+"GitGutter
 Plugin 'airblade/vim-gitgutter'
+
+"Indentation markers
+Bundle 'Yggdroot/indentLine'
 
 "CoffeeScript
 Bundle 'kchmck/vim-coffee-script'
